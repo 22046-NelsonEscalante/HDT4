@@ -7,7 +7,17 @@ public class DLNode<T> {
     public DLNode(T value, DLNode<T> next, DLNode<T> prev) {
         setValue(value);
         setNext(next);
+        if (nextNode != null) {
+            nextNode.setPrev(this);
+        }
         setPrev(prev);
+        if (prevNode != null) {
+            prevNode.setNext(this);
+        }
+    }
+
+    public DLNode(T value) {
+        this(value, null, null);
     }
 
     public DLNode<T> next() {
