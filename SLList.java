@@ -4,6 +4,11 @@ public class SLList<T> extends AbstractList<T> {
     private Node<T> start;
     private Node<T> end;
 
+    public SLList() {
+        count = 0;
+        start = null;
+        end = null;
+    }
 
     @Override
     public int size() {
