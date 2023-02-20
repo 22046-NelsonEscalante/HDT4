@@ -12,7 +12,14 @@ public class InfixReader {
             if (checkNum(c)) {
                 sorting.push(c);
             } else {
-                temp.push(c);
+                if (c.equals(")")) {
+                    while (!temp.peek().equals("(")) {
+                        sorting.push(temp.pull());
+                    }
+                    temp.pull();
+                } else {
+                    temp.push(c);
+                }
             }
         }
 
