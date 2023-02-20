@@ -5,7 +5,7 @@ public class StackMaker<T> {
         
         switch (option) {
             case 1:
-                newStack = new StackArrayList();
+                newStack = new StackArrayList<T>();
                 break;
             case 2:
                 newStack = new StackVector();
