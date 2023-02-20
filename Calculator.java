@@ -2,17 +2,19 @@ public class Calculator {
     
     private static boolean flag = false;
     private static Calculator _calc;
+    private StackMaker<String> myFactory;
     private AbstractStack<String> myStack;
     
-    private Calculator() throws SingletonException {
+    private Calculator(int option) throws SingletonException {
         flag = true;
+        myStack = myFactory.makeStack(option);
     }
 
-    public static Calculator getInstance() {
+    public static Calculator getInstance(int option) {
         if (flag) {
             return _calc;
         } else {
-            _calc = new Calculator();
+            _calc = new Calculator(option);
             return _calc;
         }
     }

@@ -1,6 +1,6 @@
 public class StackMaker<T> {
     
-    public AbstractStack<T> makeStack(int option) throws Exception {
+    public AbstractStack<T> makeStack(int option) {
         AbstractStack<T> newStack;
         
         switch (option) {
@@ -16,8 +16,6 @@ public class StackMaker<T> {
             case 4:
                 newStack = new StackDLList();
                 break;
-            default:
-                throw new Exception();
         }
     }
 }
