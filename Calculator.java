@@ -2,7 +2,7 @@ public class Calculator {
     
     private static boolean flag = false;
     private static Calculator _calc;
-    private StackMaker<String> myFactory;
+    private StackMaker<String> myFactory = new StackMaker<>();
     private AbstractStack<String> myStack;
     
     private Calculator(int option) throws SingletonException {

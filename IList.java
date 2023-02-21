@@ -6,5 +6,11 @@ public interface IList<T> {
 
     void add(T value);
 
-    T get();
+    T get(int index);
+
+    T delete(int index);
+
+    T deleteAtStart();
+
+    T deleteAtEnd();
 }

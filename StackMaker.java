@@ -8,14 +8,19 @@ public class StackMaker<T> {
                 newStack = new StackArrayList<>();
                 break;
             case 2:
-                newStack = new StackVector();
+                newStack = new StackArrayList<>();
                 break;
             case 3:
-                newStack = new StackSLList();
+                newStack = new StackSLList<>();
                 break;
             case 4:
-                newStack = new StackDLList();
+                newStack = new StackSLList<>();
+                break;
+            default:
+                newStack = new StackArrayList<>();
                 break;
         }
+
+        return newStack;
     }
 }

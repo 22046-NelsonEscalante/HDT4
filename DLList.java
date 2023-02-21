@@ -34,7 +34,7 @@ public class DLList<T> extends AbstractList<T> {
     }
 
     @Override
-    public T get() {
+    public T get(int index) {
         DLNode<T> temp = end;
         end = end.prevNode;
         if (end == null) {
@@ -44,6 +44,24 @@ public class DLList<T> extends AbstractList<T> {
         }
         count--;
         return temp.value();
+    }
+
+    @Override
+    public T delete(int index) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'delete'");
+    }
+
+    @Override
+    public T deleteAtStart() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'deleteAtStart'");
+    }
+
+    @Override
+    public T deleteAtEnd() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'deleteAtEnd'");
     }
     
 }
